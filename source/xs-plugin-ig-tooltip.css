@@ -1,0 +1,45 @@
+:root {
+  --xs-plugin-ig-tooltip-background: #424242;
+}
+
+
+.xs-plugin-ig-tooltip-outer {
+	text-decoration: underline;
+	user-select: none;
+}
+
+.xs-plugin-ig-tooltip-inner {
+	visibility: hidden;
+	position: absolute;
+	z-index: 1;
+	background-color: var(--xs-plugin-ig-tooltip-background);
+	color: white;
+	padding: 2px;
+	border-radius: 2px;
+	margin-left: 10px;
+	top: 6px;
+}
+
+.xs-plugin-ig-tooltip-outer:hover .xs-plugin-ig-tooltip-inner {
+	visibility: visible;
+}
+
+.a-GV-table td:has(.xs-plugin-ig-tooltip-outer){
+	overflow: visible;
+}
+
+.a-GV-cell.is-readonly:has(.xs-plugin-ig-tooltip-outer) {
+    background-color: unset !important;
+    color: unset !important;
+}
+
+.xs-plugin-ig-tooltip-inner::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent var(--xs-plugin-ig-tooltip-background) transparent transparent;
+}
