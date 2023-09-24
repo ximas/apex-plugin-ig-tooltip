@@ -6,7 +6,7 @@ Install Steps
 
 Usage Steps
 - ensure the Interactive Grid source's tooltip column is a string containing two values separated by a double colon (::). The first value is the cell value, the second is the tooltip; e.g. `select cell_value || '::' || cell_tooltip my_tooltip_col, ... from ...`
-- select "XS ig-plugin" as a column type for the chosen Interactive Grid tooltip column and set "Read Only -> Type" to always
+- select "XS ig-plugin" as the column type for the Interactive Grid tooltip column and set "Read Only -> Type" to always
 
 Known issues
 - The tooltip can go off the page when placed on the right side
